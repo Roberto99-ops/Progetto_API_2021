@@ -110,7 +110,6 @@ Grafo Dijkstra(unsigned int matrice[nNodi][nNodi])
         for(int j=1; j<nNodi; j++) {
             //qui controllo di non averlo già visitato
             int visitato = 0; //booleano, se 0 non ho visitato
-            //if(k<20)
             if(NonVisitati[j] == -1)
                  visitato=1;
                 //qui trovo il nodo da fare
@@ -150,9 +149,7 @@ Grafo Dijkstra(unsigned int matrice[nNodi][nNodi])
 
 void TopK(Grafo *lista)
 {
-    for(int i=0; i<k && i<numerografi; i++) {
-        /*fputs((char*)lista[i].grafo, stdout);
-        fputs(" ", stdout);*/                           //consigli per parsare da int a stringa?
+    for(int i=0; i<k && i<numerografi; i++) {                         
         if(i==k-1 || i==numerografi-1)
             printf("%d", lista[i].grafo);
         else
